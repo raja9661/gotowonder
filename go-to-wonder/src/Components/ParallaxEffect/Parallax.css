@@ -1,0 +1,387 @@
+
+.wrapper{
+    background: #fff;
+}
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+section::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top,#555,transparent);
+    z-index: 10;
+
+}
+section img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* pointer-events: all; */
+    pointer-events: none;
+
+}
+section #text{
+    position: absolute;
+    color: #094b65;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: "Rancho", cursive;
+    transform: translateY(-50%);
+}
+section #text span{
+    font-size: 0.20em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    font-family: "Poppins", sans-serif;
+}
+#btn{
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 30px;
+    background: #fff;
+    color: #094b65;
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(25px);
+    cursor: pointer;
+}
+.sec{
+    position: relative;
+    /* padding: 100px; */
+    background: black;
+}
+.sec h2{
+    font-size: 3.5em;
+    color: #fff;
+    margin-bottom: 10px
+}
+.sec p{
+    font-size: 1em;
+    color: #fff;
+}
+#water{
+    object-fit: contain;
+    position: absolute;
+    top: 100px;
+    width: 20rem;
+    z-index: 5;
+}
+#rocks{
+  
+    /* padding-top: 5px;
+    margin-top: 350px;
+    height: 300px; */
+    height: 320px;
+    /* position: fixed; */
+    margin-top: 300px;
+    padding-top: 40px;
+}
+.popup{
+    /* border: 2px solid black; */
+    height: 300px;
+    width: 450px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    visibility: hidden;
+    z-index: 10000;
+    box-shadow: 3px 3px olive, -0.5em 0 .4em olive;
+}
+.image{
+    position: relative;
+    top: 100px;
+    left: 10px;
+    width: 70%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+#grass{
+  object-fit: contain;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+}
+.image img{
+   position: absolute;
+   left: 10px;
+   top: 40px;
+    width: 80%;
+    height: 50%;
+    object-fit: contain;
+}
+.message{
+  position: absolute;
+  top: 60px;
+  right: 40px;
+  /* border: 2px solid black; */
+  height: 20%;
+  width: 30%;
+  z-index: 1;
+}
+#b2{
+  position: absolute;
+  top: 100px;
+  right:80px ;
+  padding: 10px 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: skyblue;
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+#b2:active{
+  transform: scale(0.95);
+}
+.oval-thought{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    position: absolute;
+    top: 80px;
+    right: 60px;
+    width: 150px;
+    height: 100px;
+    font-size: 12px;
+    /* padding: 50px 40px; */
+    text-align: center;
+    color: white;
+    background: linear-gradient(#2e88c4, #075698);
+    border-radius: 100%;
+    z-index: 10;  
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    visibility: hidden;
+  }
+  
+  .oval-thought:before{
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50px;
+    width: 30px;
+    height: 30px;
+    background: #075698;
+    border-radius: 30px;
+  }
+  
+  .oval-thought:after{
+    content: "";
+    position: absolute;
+    bottom: -30px;
+    left: 30px;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background: #075698;
+  }
+  .open-msg{
+    visibility: visible;
+  }
+  #b{
+  padding: 10px 10px;
+  outline: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background: skyblue;
+  border-radius: 10px;
+  transition: transform 0.2s;
+  }
+  #b:active{
+    transform: scale(0.95);
+  }
+  .sh{
+    visibility: visible;
+  }
+  #fs{
+    color: yellow;
+  }
+  .close-btn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    background: #555;
+    padding: 10px;
+    border-radius: 100%;
+    color: #eee;
+    font-weight: 600;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  @keyframes myfirst{
+    0%{
+        transform: translate(-50%,-50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%,-50%) rotate(350deg);
+    }
+}
+  @media screen and (min-width:1855px){
+    section{
+      height: 80vh;
+    }
+    
+     #rocks{
+      margin-top: 580px;
+      height: 500px;
+    }
+    #water{
+      top: 880px;
+      width: 25rem;
+    }
+    
+  }
+  @media screen and (min-width:1697px){
+    section{
+      height: 70vh;
+    }
+    #rocks{
+      margin-top: 900px;
+      height: 350px;
+    }
+    /* #water{
+      top: 125px;
+      width: 25rem;
+    } */
+  }
+  @media screen and (min-width:1478px){
+    section{
+      height: 85vh;
+    }
+    #rocks{
+      margin-top: 380px;
+      height: 320px;
+    }
+    
+  }
+  @media screen and (min-width:1344px){
+    section{
+      height: 90vh;
+    }
+    #rocks{
+      margin-top: 380px;
+      height: 280px;
+    }
+    #water{
+      top: 125px;
+      width: 25rem;
+    }
+    
+  }
+
+  @media screen and (max-width:1250px){
+    #rocks{
+      margin-top: 300px;
+    }
+    #water{
+      top: 60px;
+      width: 20rem;
+    }
+
+    #btn{
+      position: absolute;
+      top: 220px;
+    }
+  }
+  @media screen and (max-width:950px)
+  {
+    section{
+      height: 55vh;
+    }
+    #water{
+      width: 12rem;
+      top: 60px;
+    }
+    #rocks{
+      margin-top: 150px;
+      height: 200px;
+    }
+    section::before{
+      height: 1px;
+    }
+    #btn{
+      position: absolute;
+      top: 100px;
+      padding: 5px 20px;
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 30px;
+    }
+    .popup{
+      height: 280px;
+      width: 380px;
+      top: 40%;
+    }
+    .oval-thought{
+      right: 50px;
+    }
+  }
+  @media screen and (max-width:450px)
+  {
+    section{
+      height: 50vh;
+    }
+    #water{
+      width: 12rem;
+      top: 95px;
+    }
+    #rocks{
+      margin-top: 250px;
+      height: 260px;
+    }
+    section::before{
+      height: 1px;
+    }
+    #btn{
+      position: absolute;
+      top: 160px;
+      padding: 5px 20px;
+      font-size: 1em;
+      font-weight: 600;
+      letter-spacing: 1px;
+      border-radius: 30px;
+    }
+    .popup{
+      height: 280px;
+      width: 380px;
+      top: 30%;
+    }
+    .oval-thought{
+      right: 50px;
+    }
+  }
+
+
+  /* min-he/ight: 100vh; */

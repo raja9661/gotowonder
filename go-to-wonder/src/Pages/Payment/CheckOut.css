@@ -1,0 +1,78 @@
+
+.book{
+    /* border: 2px solid gold; */
+    width: 100vw;
+    height: 100vh;
+    padding: 2rem 9%;
+}
+.order-heading{
+    text-align: center;
+    padding: 2.5rem 0;
+  }
+  .order-heading span{
+    font-size: 2.5rem;
+    background: rgba(255, 165, 0, .2);
+    color: var(--orange);
+    border-radius: .5rem;
+    padding: .2rem 1rem;
+  }
+  #cost{
+    /* border: 2px solid black; */
+    /* display: inline-block; */
+    margin: 0 auto;
+    width: 180px;
+    text-align: center;
+  }
+  .order-heading span.space{
+    background: none;
+  }
+.book .booking-row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center;
+    height: 20px;
+}
+.book .booking-row .booking-image{
+    flex: 1 1 30rem;
+    align-items: flex-start;
+}
+.book .booking-row .booking-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.book .booking-row form{
+    flex: 1 1 25rem;
+    padding: 2rem;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+}
+.book .booking-row form .inputBox{
+    padding: .5rem 0;
+}
+.book .booking-row form .inputBox input{
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    font-size: 1rem;
+    color: #333;
+    text-transform: none;
+    border: none;
+    outline: none;
+}
+.book .booking-row form .inputBox h3{
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    color: #666;
+}
+.booking-btn{
+    display: inline-block;
+    margin-top: 1rem;
+    background: var(--gold);
+    color: #fff;
+    padding: .6rem 1rem;
+    border: .2rem solid var(--gold);
+    cursor: pointer;
+    font-size: 1rem;
+}
